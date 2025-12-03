@@ -2,7 +2,7 @@
 
 Este projeto consiste em um notebook Jupyter que desenvolve um modelo de Deep Learning para prever se um usuário pagará ou não o seu empréstimo. A base de dados utilizada é do LendingClub, uma plataforma de empréstimos peer-to-peer.
 
-## 📋 Descrição
+## Descrição
 
 O objetivo principal é realizar uma classificação binária para prever a variável alvo `loan_repaid` (1 = Pagou, 0 = Não Pagou / Charged Off), utilizando dados históricos de empréstimos. O projeto segue um fluxo completo de ciência de dados:
 
@@ -26,7 +26,7 @@ O objetivo principal é realizar uma classificação binária para prever a vari
     *   Análise das curvas de perda (loss) de treino e validação.
     *   Matriz de Confusão e Relatório de Classificação (Precision, Recall, F1-Score).
 
-## 📂 Dataset
+## Dataset
 
 Os dados contêm informações sobre empréstimos concedidos pelo LendingClub.
 *   **Variável Alvo:** `loan_status` (transformada em `loan_repaid`).
@@ -40,7 +40,7 @@ Os dados contêm informações sobre empréstimos concedidos pelo LendingClub.
     *   `grade`, `sub_grade`: Classificação de risco do LendingClub.
     *   `address`: Endereço do mutuário.
 
-## 🛠 Tecnologias e Bibliotecas
+## Tecnologias e Bibliotecas
 
 *   **Python**
 *   **Pandas & NumPy:** Manipulação e limpeza de dados.
@@ -48,7 +48,7 @@ Os dados contêm informações sobre empréstimos concedidos pelo LendingClub.
 *   **Scikit-learn:** Pré-processamento e métricas de avaliação.
 *   **TensorFlow / Keras:** Construção e treinamento da rede neural.
 
-## 🧠 Arquitetura do Modelo (Exemplo)
+## Arquitetura do Modelo (Exemplo)
 
 O modelo final sugerido no notebook possui uma estrutura similar a:
 *   **Camada de Entrada:** Conectada às features processadas (após dummies e scaling).
@@ -58,13 +58,13 @@ O modelo final sugerido no notebook possui uma estrutura similar a:
 *   **Otimizador:** Adam.
 *   **Loss Function:** Binary Crossentropy.
 
-## 📊 Resultados e Métricas
+## Resultados e Métricas
 
 O notebook avalia o modelo comparando as classes `Fully Paid` vs `Charged Off`.
 *   É dada atenção especial às métricas de **f1-score**, **precision** e **recall**, dado o desbalanceamento natural das classes (muito mais pagadores do que inadimplentes).
 *   O modelo é testado simulando a aprovação de um novo cliente aleatório para verificar a predição na prática.
 
-## 🚀 Como Executar
+## Como Executar
 
 1.  Certifique-se de ter o arquivo de dados (ex: `lending_club_loan_two.csv`) disponível.
 2.  Abra o notebook `housing_emprestimos.ipynb` no Jupyter ou Google Colab.
