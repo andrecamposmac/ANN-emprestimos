@@ -1,6 +1,6 @@
 # Previsão de Pagamento de Empréstimos (LendingClub)
 
-Este projeto consiste em um notebook Jupyter que desenvolve um modelo de Deep Learning para prever se um mutuário pagará ou não o seu empréstimo. A base de dados utilizada é do LendingClub, uma plataforma de empréstimos peer-to-peer.
+Este projeto consiste em um notebook Jupyter que desenvolve um modelo de Deep Learning para prever se um usuário pagará ou não o seu empréstimo. A base de dados utilizada é do LendingClub, uma plataforma de empréstimos peer-to-peer.
 
 ## 📋 Descrição
 
