@@ -1,0 +1,77 @@
+# Loan Payment Prediction (LendingClub)
+
+This project consists of a Jupyter notebook that develops a Deep Learning model to predict whether a user will pay back their loan or not. The dataset used is from LendingClub, a peer-to-peer lending platform.
+
+## Description
+
+The main objective is to perform binary classification to predict the target variable `loan_repaid` (1 = Paid, 0 = Did Not Pay / Charged Off), using historical loan data. The project follows a complete data science flow:
+
+1.  **Exploratory Data Analysis (EDA):**
+    *   Visualization of the target variable distribution (class balancing).
+    *   Correlation analysis between numeric variables (heat map).
+    *   Investigation of the relationship between *grade* (credit rating), *sub_grade* and loan status.
+2.  **Data Preprocessing and Cleaning:**
+    *   Treatment of missing values in columns such as `emp_length`, `mort_acc`, `pub_rec_bankruptcies`, etc.
+    *   Data imputation (e.g., filling `mort_acc` based on `total_acc`).
+    *   Feature Engineering:
+        *   Extraction of zip code from address.
+        *   Extraction of loan issue year (`issue_d`).
+        *   Conversion of the `term` column to numeric.
+    *   Encoding of categorical variables (One-Hot Encoding/Dummy variables).
+    *   Data normalization with `MinMaxScaler`.
+3.  **Modeling:**
+    *   Construction of an Artificial Neural Network (ANN) with Keras/TensorFlow.
+    *   Sequential architecture with dense layers and Dropout for regularization.
+4.  **Evaluation:**
+    *   Analysis of training and validation loss curves.
+    *   Confusion Matrix and Classification Report (Precision, Recall, F1-Score).
+
+## Dataset
+  
+The data contains information about loans granted by LendingClub.
+*   **Target Variable:** `loan_status` (transformed into `loan_repaid`).
+*   **Main Features:**
+    *   `loan_amnt`: Loan amount.
+    *   `int_rate`: Interest rate.
+    *   `installment`: Monthly installment.
+    *   `annual_inc`: Annual income.
+    *   `dti`: Debt-to-income ratio.
+    *   `open_acc`, `total_acc`, `mort_acc`: Credit account history.
+    *   `grade`, `sub_grade`: LendingClub risk classification.
+    *   `address`: Borrower's address.
+
+## Technologies and Libraries
+
+*   **Python**
+*   **Pandas & NumPy:** Data manipulation and cleaning.
+*   **Matplotlib & Seaborn:** Data visualization (histograms, boxplots, heatmaps).
+*   **Scikit-learn:** Preprocessing and evaluation metrics.
+*   **TensorFlow / Keras:** Neural network construction and training.
+
+## Model Architecture (Example)
+
+The final model suggested in the notebook has a structure similar to:
+*   **Input Layer:** Connected to processed features (after dummies and scaling).
+*   **Hidden Layers:** Several dense layers (e.g., 78 -> 39 -> 19 neurons) with **ReLU** activation function.
+*   **Dropout:** Dropout layers (e.g., 20% to 50%) to prevent overfitting.
+*   **Output Layer:** 1 neuron with **Sigmoid** activation (for binary classification).
+*   **Optimizer:** Adam.
+*   **Loss Function:** Binary Crossentropy.
+
+## Results and Metrics
+
+The notebook evaluates the model comparing `Fully Paid` vs `Charged Off` classes.
+*   Special attention is given to **f1-score**, **precision**, and **recall** metrics, given the natural class imbalance (many more payers than defaulters).
+*   The model is tested by simulating approval of a random new customer to verify prediction in practice.
+
+## How to Run
+
+1.  Ensure the data file (e.g., `lending_club_loan_two.csv`) is available.
+2.  Open the notebook `housing_emprestimos.ipynb in Jupyter or Google Colab.
+3.  Adjust the CSV loading path if necessary.
+4.  Execute the cells sequentially to perform cleaning, training, and evaluation.
+
+***
+
+
+[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/73677613/b3cc193e-123d-4969-a76a-83990ce66253/README-2.md)
