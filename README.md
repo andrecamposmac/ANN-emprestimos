@@ -72,4 +72,3 @@ O notebook avalia o modelo comparando as classes `Fully Paid` vs `Charged Off`.
 4.  Execute as células sequencialmente para realizar a limpeza, treino e avaliação.
 
 ---
-**Autor:** André Campos Machado
