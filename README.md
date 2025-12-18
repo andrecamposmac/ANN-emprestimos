@@ -1,4 +1,4 @@
-# Previsão de Pagamento de Empréstimos (LendingClub)
+# Previsão de Pagamento de Empréstimos
 
 Este projeto consiste em um notebook Jupyter que desenvolve um modelo de Deep Learning para prever se um usuário pagará ou não o seu empréstimo. A base de dados utilizada é do LendingClub, uma plataforma de empréstimos peer-to-peer.
 
@@ -63,12 +63,3 @@ O modelo final sugerido no notebook possui uma estrutura similar a:
 O notebook avalia o modelo comparando as classes `Fully Paid` vs `Charged Off`.
 *   É dada atenção especial às métricas de **f1-score**, **precision** e **recall**, dado o desbalanceamento natural das classes (muito mais pagadores do que inadimplentes).
 *   O modelo é testado simulando a aprovação de um novo cliente aleatório para verificar a predição na prática.
-
-## Como Executar
-
-1.  Certifique-se de ter o arquivo de dados (ex: `lending_club_loan_two.csv`) disponível.
-2.  Abra o notebook `housing_emprestimos.ipynb` no Jupyter ou Google Colab.
-3.  Ajuste o caminho de carregamento do CSV se necessário.
-4.  Execute as células sequencialmente para realizar a limpeza, treino e avaliação.
-
----
