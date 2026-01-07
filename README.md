@@ -63,3 +63,6 @@ O modelo final sugerido no notebook possui uma estrutura similar a:
 O notebook avalia o modelo comparando as classes `Fully Paid` vs `Charged Off`.
 *   É dada atenção especial às métricas de **f1-score**, **precision** e **recall**, dado o desbalanceamento natural das classes (muito mais pagadores do que inadimplentes).
 *   O modelo é testado simulando a aprovação de um novo cliente aleatório para verificar a predição na prática.
+
+## Fonte:
+Este notebook é uma adaptação de um dos exercícios do curso "Complete Tensorflow 2 and Keras Deep Learning Bootcamp" (disponível na Udemy) com autoria de Jose Portilla (Perian Training).
